@@ -1,0 +1,757 @@
+/* ==========================================================================
+   RTL + YekanBakhFaNum — Landing page overrides
+   ========================================================================== */
+
+/* --- Font faces --- */
+@font-face {
+  font-family: 'YekanBakhFaNum';
+  src: url('../font/YekanBakhFaNum/woff2/YekanBakhFaNum-Thin.woff2') format('woff2'),
+       url('../font/YekanBakhFaNum/woff/YekanBakhFaNum-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'YekanBakhFaNum';
+  src: url('../font/YekanBakhFaNum/woff2/YekanBakhFaNum-Light.woff2') format('woff2'),
+       url('../font/YekanBakhFaNum/woff/YekanBakhFaNum-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'YekanBakhFaNum';
+  src: url('../font/YekanBakhFaNum/woff2/YekanBakhFaNum-Regular.woff2') format('woff2'),
+       url('../font/YekanBakhFaNum/woff/YekanBakhFaNum-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'YekanBakhFaNum';
+  src: url('../font/YekanBakhFaNum/woff2/YekanBakhFaNum-SemiBold.woff2') format('woff2'),
+       url('../font/YekanBakhFaNum/woff/YekanBakhFaNum-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'YekanBakhFaNum';
+  src: url('../font/YekanBakhFaNum/woff2/YekanBakhFaNum-Bold.woff2') format('woff2'),
+       url('../font/YekanBakhFaNum/woff/YekanBakhFaNum-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'YekanBakhFaNum';
+  src: url('../font/YekanBakhFaNum/woff2/YekanBakhFaNum-ExtraBold.woff2') format('woff2'),
+       url('../font/YekanBakhFaNum/woff/YekanBakhFaNum-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'YekanBakhFaNum';
+  src: url('../font/YekanBakhFaNum/woff2/YekanBakhFaNum-Black.woff2') format('woff2'),
+       url('../font/YekanBakhFaNum/woff/YekanBakhFaNum-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'YekanBakhFaNum';
+  src: url('../font/YekanBakhFaNum/woff2/YekanBakhFaNum-ExtraBlack.woff2') format('woff2'),
+       url('../font/YekanBakhFaNum/woff/YekanBakhFaNum-ExtraBlack.woff') format('woff');
+  font-weight: 950;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- Base typography & direction --- */
+html {
+  direction: rtl;
+}
+
+html,
+body,
+body * {
+  font-family: 'YekanBakhFaNum', Tahoma, sans-serif;
+}
+
+body {
+  font-weight: 400;
+  text-align: right;
+}
+
+input,
+textarea,
+select {
+  font-family: 'YekanBakhFaNum', Tahoma, sans-serif;
+  text-align: right;
+  direction: rtl;
+}
+
+a[href^="tel:"],
+a[href^="mailto:"] {
+  direction: ltr;
+  unicode-bidi: embed;
+  display: inline-block;
+}
+
+/* Mirror default float-based layout */
+html[dir="rtl"] div,
+html[dir="rtl"] p,
+html[dir="rtl"] ul,
+html[dir="rtl"] ol,
+html[dir="rtl"] li,
+html[dir="rtl"] header,
+html[dir="rtl"] footer,
+html[dir="rtl"] section,
+html[dir="rtl"] nav,
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6,
+html[dir="rtl"] form,
+html[dir="rtl"] article,
+html[dir="rtl"] main,
+html[dir="rtl"] adress {
+  float: right;
+}
+
+html[dir="rtl"] button {
+  float: right;
+}
+
+html[dir="rtl"] .wrap {
+  float: none;
+}
+
+/* --- Scrollbar (Windows) --- */
+html[dir="rtl"] body.locked.body-margin.os-windows.chrome-browser:before,
+html[dir="rtl"] body.locked.body-margin.os-windows.opera-browser:before {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .body-margin.os-windows .top_panel {
+  left: 8px;
+  right: 0;
+}
+
+html[dir="rtl"] .body-margin.os-windows.chrome-browser,
+html[dir="rtl"] .body-margin.os-windows.opera-browser {
+  padding-right: 0;
+  padding-left: 8px;
+}
+
+html[dir="rtl"] .body-margin.os-windows.chrome-browser .hum_btn,
+html[dir="rtl"] .body-margin.os-windows.opera-browser .hum_btn,
+html[dir="rtl"] .body-margin.os-windows.chrome-browser .modal_form .close,
+html[dir="rtl"] .body-margin.os-windows.opera-browser .modal_form .close {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+html[dir="rtl"] .body-margin.os-windows.chrome-browser .single-page .top_panel,
+html[dir="rtl"] .body-margin.os-windows.opera-browser .single-page .top_panel,
+html[dir="rtl"] .body-margin.os-windows.chrome-browser .footer,
+html[dir="rtl"] .body-margin.os-windows.opera-browser .footer {
+  right: 0;
+  left: 8px;
+}
+
+/* --- Top panel --- */
+html[dir="rtl"] .top_panel .currency {
+  left: auto;
+  right: -150px;
+}
+
+html[dir="rtl"] .top_panel .user {
+  right: auto;
+  left: -150px;
+}
+
+html[dir="rtl"] .top_panel .user .usermenu {
+  right: auto;
+  left: 0;
+  border-radius: 0 20px 20px 20px;
+}
+
+html[dir="rtl"] .top_panel .user .usermenu ul li a {
+  float: right;
+}
+
+html[dir="rtl"] .top_panel .left {
+  padding-right: 0;
+  padding-left: 40px;
+}
+
+html[dir="rtl"] .top_panel .left .search_btn {
+  margin-right: 0;
+  margin-left: 40px;
+}
+
+html[dir="rtl"] .top_panel .left .logo,
+html[dir="rtl"] .top_panel .left .logo img {
+  float: right;
+}
+
+html[dir="rtl"] .top_panel .center .menu ul li {
+  margin-right: 0;
+  margin-left: 70px;
+}
+
+html[dir="rtl"] .top_panel .center .menu ul li:last-child {
+  margin-left: 0;
+}
+
+html[dir="rtl"] .top_panel .center .menu ul li a {
+  float: right;
+}
+
+html[dir="rtl"] .top_panel .center .menu ul li .dropdown_ul {
+  left: auto;
+  right: 0;
+  border-radius: 12px 0 12px 12px;
+}
+
+html[dir="rtl"] .top_panel .right {
+  float: left;
+}
+
+html[dir="rtl"] .top_panel .right .tel {
+  margin-right: 0;
+  margin-left: 58px;
+}
+
+html[dir="rtl"] .top_panel .right .tel a,
+html[dir="rtl"] .top_panel .right .favorites-count {
+  float: right;
+}
+
+html[dir="rtl"] .top_panel .right .favorites-count ._text {
+  margin-left: 0;
+  margin-right: 13px;
+}
+
+html[dir="rtl"] .top_panel .mobile_btn {
+  float: left;
+}
+
+/* --- Main slider --- */
+html[dir="rtl"] .main_slider .slider_wrap .slide .slide_content {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .main_slider .slider_wrap .slide .slide_content .title_wrap {
+  transform: translateX(100vw);
+}
+
+html[dir="rtl"] .main_slider .slider_wrap .slide.slick-active .slide_content .title_wrap,
+html[dir="rtl"] .main_slider .slider_wrap .slide.slick-active .slide_content .text,
+html[dir="rtl"] .main_slider .slider_wrap .slide.slick-active .slide_content .buttons {
+  transform: none;
+}
+
+html[dir="rtl"] .main_slider .slider_wrap .slide .slide_content .text,
+html[dir="rtl"] .main_slider .slider_wrap .slide .slide_content .buttons {
+  transform: translateX(100vw);
+}
+
+html[dir="rtl"] .main_slider .slider_wrap .slide .slide_content .title_wrap .country {
+  left: auto;
+  right: 0;
+  text-align: right;
+  padding-left: 0;
+  padding-right: 18px;
+}
+
+html[dir="rtl"] .main_slider .slider_wrap .slide .slide_content .title_wrap .country:before {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .main_slider .slider_wrap .slide .slide_content .buttons .btn,
+html[dir="rtl"] .main_slider .slider_wrap .slide .slide_content .buttons .link {
+  float: right;
+}
+
+html[dir="rtl"] .main_slider .slider_wrap .slide .slide_content .buttons .link {
+  margin-left: 0;
+  margin-right: 50px;
+}
+
+html[dir="rtl"] .main_slider .slider_wrap .slide .next_title {
+  right: auto;
+  left: 0;
+  transform: translateX(-50vw);
+}
+
+html[dir="rtl"] .main_slider .slider_wrap .slide.slick-active .slide_content .next_title {
+  transform: none;
+}
+
+html[dir="rtl"] .main_slider .arrows {
+  right: auto;
+  left: 50%;
+  margin-right: 0;
+  margin-left: -720px;
+}
+
+html[dir="rtl"] .main_slider .arrows .arrow.next {
+  margin-left: 0;
+  margin-right: 18px;
+  transform: none;
+}
+
+html[dir="rtl"] .main_slider .arrows .arrow:not(.next) {
+  transform: rotate(180deg);
+}
+
+/* --- Section titles & controls --- */
+html[dir="rtl"] .page_head .title,
+html[dir="rtl"] .page_head .subtitle {
+  text-align: right;
+}
+
+html[dir="rtl"] .most_popular .title_wrap,
+html[dir="rtl"] .destinations .title_wrap,
+html[dir="rtl"] .stories .title_wrap,
+html[dir="rtl"] .blog .title_wrap {
+  padding-right: 0;
+  padding-left: 300px;
+}
+
+html[dir="rtl"] .most_popular .controls,
+html[dir="rtl"] .destinations .controls,
+html[dir="rtl"] .stories .controls,
+html[dir="rtl"] .blog .controls {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .most_popular .controls .link,
+html[dir="rtl"] .destinations .controls .link,
+html[dir="rtl"] .stories .controls .link,
+html[dir="rtl"] .blog .controls .link {
+  float: right;
+}
+
+html[dir="rtl"] .most_popular .controls .link,
+html[dir="rtl"] .stories .controls .link {
+  margin-right: 0;
+  margin-left: 30px;
+}
+
+html[dir="rtl"] .most_popular .controls .arrows .arrow.next,
+html[dir="rtl"] .stories .controls .arrows .arrow.next {
+  margin-left: 0;
+  margin-right: 18px;
+  transform: none;
+}
+
+html[dir="rtl"] .most_popular .controls .arrows .arrow:not(.next),
+html[dir="rtl"] .stories .controls .arrows .arrow:not(.next) {
+  transform: rotate(180deg);
+}
+
+/* --- Tour items --- */
+html[dir="rtl"] .tour_item {
+  float: right;
+  margin-right: 0;
+  margin-left: 40px;
+}
+
+html[dir="rtl"] .tour_item_top {
+  padding-right: 0;
+  padding-left: 80px;
+}
+
+html[dir="rtl"] .tour_item_top .country span {
+  padding-left: 0;
+  padding-right: 12px;
+}
+
+html[dir="rtl"] .tour_item_top .country span:before {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .tour_item_top .add_bookmark {
+  right: auto;
+  left: 0;
+}
+
+.tour_item_top .add_bookmark .tour-item-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  z-index: 2;
+  pointer-events: none;
+}
+
+html[dir="rtl"] .tour_item_bottom {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .tour_item_bottom ._info_left .days {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+html[dir="rtl"] .tour_item_bottom ._info_right {
+  float: left;
+}
+
+html[dir="rtl"] .tour_item_bottom ._info_right .rating-stars {
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+/* --- Destinations --- */
+html[dir="rtl"] .destinations_item {
+  float: right;
+  margin-right: 0;
+  margin-left: 2.66666667%;
+}
+
+html[dir="rtl"] .destinations_item:nth-child(4n) {
+  margin-left: 0;
+}
+
+html[dir="rtl"] .destinations_item .sq_parent .sq_wrap .sq_content {
+  float: right;
+}
+
+/* --- Search form --- */
+html[dir="rtl"] .search-form .destination-col {
+  margin-right: 0;
+  margin-left: 85px;
+}
+
+html[dir="rtl"] .search-form .destination-col .select_wrap:before {
+  right: auto;
+  left: 20px;
+}
+
+html[dir="rtl"] .search-form .destination-col .select_wrap select {
+  float: right;
+  padding-left: 45px;
+  padding-right: 24px;
+}
+
+html[dir="rtl"] .search-form .date-col {
+  border-right: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.24);
+  margin-right: 0;
+  margin-left: 27px;
+}
+
+html[dir="rtl"] .search-form .date-col .date_div_right {
+  margin-left: 0;
+  margin-right: 15px;
+}
+
+html[dir="rtl"] .search-form .num-col {
+  border-right: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+html[dir="rtl"] .search-form .num-col.last {
+  border-left: 0;
+  padding-left: 0;
+  padding-right: 38px;
+}
+
+html[dir="rtl"] .search-form .num-col .val {
+  margin-left: 0;
+  margin-right: 10px;
+  float: right;
+}
+
+html[dir="rtl"] .search-form .btn {
+  right: auto;
+  left: 54px;
+}
+
+/* --- Stories --- */
+html[dir="rtl"] .story_item {
+  float: right;
+  margin-right: 0;
+  margin-left: 35px;
+}
+
+/* --- Blog --- */
+html[dir="rtl"] .blog_item {
+  float: right;
+  margin-right: 0;
+  margin-left: 2%;
+}
+
+html[dir="rtl"] .blog_item:nth-child(3n) {
+  margin-left: 0;
+}
+
+html[dir="rtl"] .blog_item_top .tags .tag {
+  margin-right: 0;
+  margin-left: 8px;
+}
+
+html[dir="rtl"] .blog_item_top .sq_parent .sq_wrap .sq_content {
+  float: right;
+}
+
+html[dir="rtl"] .blog_item_bottom .author {
+  padding-left: 0;
+  padding-right: 60px;
+}
+
+html[dir="rtl"] .blog_item_bottom .author .userpic {
+  left: auto;
+  right: 0;
+}
+
+/* --- Subscribe --- */
+html[dir="rtl"] .subscribe_section .subscribe_block .right {
+  float: left;
+}
+
+html[dir="rtl"] .subscribe_section .subscribe_block .right .input_wrap.select_wrap {
+  margin-right: 0;
+  margin-left: 30px;
+}
+
+html[dir="rtl"] .subscribe_section .subscribe_block .right .input_wrap.select_wrap:before {
+  right: auto;
+  left: 24px;
+}
+
+html[dir="rtl"] .subscribe_section .subscribe_block .right .input_wrap .input {
+  float: right;
+}
+
+html[dir="rtl"] .subscribe_section .subscribe_block .right .input_wrap select {
+  padding: 0 28px 0 50px;
+}
+
+html[dir="rtl"] .subscribe_section .subscribe_block .right .submit {
+  margin-left: 0;
+  margin-right: 25px;
+}
+
+/* --- Instagram --- */
+html[dir="rtl"] .instagram_posts .post {
+  float: right;
+}
+
+html[dir="rtl"] .instagram_posts .post .sq_parent .sq_wrap .sq_content {
+  float: right;
+}
+
+/* --- Footer --- */
+html[dir="rtl"] .footer_top .right {
+  float: left;
+}
+
+html[dir="rtl"] .footer_top .right .contacts_info .tel {
+  padding-right: 0;
+  padding-left: 20px;
+}
+
+html[dir="rtl"] .footer_top .right .contacts_info .tel a,
+html[dir="rtl"] .footer_top .right .contacts_info .email a {
+  float: right;
+}
+
+html[dir="rtl"] .footer_top .right .address {
+  padding-left: 0;
+  padding-right: 28px;
+}
+
+html[dir="rtl"] .footer_top .right .address:before {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .footer_top .col {
+  padding-right: 0;
+  padding-left: 42px;
+}
+
+html[dir="rtl"] .footer_bottom .right {
+  float: left;
+}
+
+html[dir="rtl"] .social-links .link {
+  float: right;
+  margin-right: 0;
+  margin-left: 23px;
+}
+
+html[dir="rtl"] .social-links .link:last-child {
+  margin-left: 0;
+}
+
+/* --- Popups --- */
+html[dir="rtl"] .popup {
+  right: auto;
+  left: -700px;
+}
+
+html[dir="rtl"] .popup.opened {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .popup .select-userpic {
+  left: auto;
+  right: 65px;
+}
+
+html[dir="rtl"] .popup .select-userpic .userpic {
+  margin-right: 0;
+  margin-left: 15px;
+}
+
+html[dir="rtl"] .popup .select-userpic .select label {
+  float: right;
+}
+
+html[dir="rtl"] .popup-head .link {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .popup .close {
+  right: auto;
+  left: 30px;
+}
+
+html[dir="rtl"] .popup.book-now-popup .tour-info .col .date {
+  padding-left: 0;
+  padding-right: 66px;
+}
+
+html[dir="rtl"] .popup.book-now-popup .tour-info .col .date .day {
+  left: auto;
+  right: 0;
+}
+
+/* --- Pagination --- */
+html[dir="rtl"] .pagination .arrow.next {
+  transform: rotate(180deg);
+}
+
+/* --- Responsive RTL fixes --- */
+@media screen and (max-width: 1762px) {
+  html[dir="rtl"] .top_panel .currency {
+    left: auto;
+    right: 0;
+  }
+
+  html[dir="rtl"] .top_panel .user {
+    right: auto;
+    left: 0;
+  }
+
+  html[dir="rtl"] .top_panel .center .menu ul li {
+    margin-left: 50px;
+  }
+
+  html[dir="rtl"] .main_slider .arrows {
+    margin-left: -650px;
+  }
+}
+
+@media screen and (max-width: 1520px) {
+  html[dir="rtl"] .search-form .destination-col {
+    margin-left: 45px;
+  }
+
+  html[dir="rtl"] .popup .close {
+    left: 30px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  html[dir="rtl"] .main_slider .arrows {
+    margin-left: -640px;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  html[dir="rtl"] .top_panel .menu_wrap .close {
+    float: left;
+    right: auto;
+    left: 0;
+  }
+
+  html[dir="rtl"] .top_panel .user {
+    left: 50%;
+    margin-left: 0;
+    margin-right: -470px;
+  }
+
+  html[dir="rtl"] .top_panel .right .favorites-count {
+    left: 50%;
+    margin-left: 0;
+    margin-right: -400px;
+  }
+
+  html[dir="rtl"] .top_panel .center {
+    margin-left: 0;
+    margin-right: -470px;
+  }
+
+  html[dir="rtl"] .top_panel .center .menu ul li {
+    text-align: right;
+  }
+
+  html[dir="rtl"] .top_panel .center .menu ul li a {
+    float: right;
+  }
+}
+
+html[dir="rtl"] .subscribe_section .wrap .wrap_float .subscribe_block {
+  float: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html[dir="rtl"] .subscribe_section .wrap .wrap_float .subscribe_block .left {
+  float: unset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+html[dir="rtl"] .subscribe_section .wrap .wrap_float .subscribe_block .left h2{
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+html[dir="rtl"] .subscribe_section .wrap .wrap_float .subscribe_block .left h2 small{
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  margin: 0 10px;
+  }
