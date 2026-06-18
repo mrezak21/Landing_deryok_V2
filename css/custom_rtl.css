@@ -755,3 +755,145 @@ html[dir="rtl"] .subscribe_section .wrap .wrap_float .subscribe_block .left h2 s
   color: #ffffff;
   margin: 0 10px;
   }
+
+.about-us-page .statistics_item ._value._value--icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: normal;
+  width: 82px;
+  height: 82px;
+}
+
+.about-us-page .statistics_item ._value._value--icon svg {
+  width: 40px;
+  height: auto;
+  display: block;
+ 
+}
+
+/* --- About Us page RTL --- */
+html[dir="rtl"] .about-us-page .image-block {
+  text-align: right;
+}
+
+html[dir="rtl"] .about-us-page .statistics_item {
+  float: right;
+  margin-right: 0;
+  margin-left: 5%;
+}
+
+html[dir="rtl"] .about-us-page .statistics_item:last-child {
+  margin-left: 0;
+}
+
+html[dir="rtl"] .about-us-page .team .arrows {
+  right: auto;
+  left: 0;
+}
+
+html[dir="rtl"] .about-us-page .team .arrows .arrow.next {
+  margin-left: 0;
+  margin-right: 18px;
+  transform: none;
+}
+
+html[dir="rtl"] .about-us-page .team .arrows .arrow:not(.next) {
+  transform: rotate(180deg);
+}
+
+html[dir="rtl"] .about-us-page .team_item {
+  float: right;
+  margin-right: 0;
+  margin-left: 30px;
+}
+
+html[dir="rtl"] .about-us-page .office .arrows {
+  right: auto;
+  left: 30px;
+}
+
+html[dir="rtl"] .about-us-page .office .arrows .arrow.next {
+  margin-left: 0;
+  margin-right: 18px;
+  transform: none;
+}
+
+html[dir="rtl"] .about-us-page .office .arrows .arrow:not(.next) {
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 760px) {
+  html[dir="rtl"] .about-us-page .statistics_item {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  html[dir="rtl"] .mobile .about-us-page .team-body .slider {
+    padding-left: 0;
+    padding-right: 4vw;
+  }
+
+  html[dir="rtl"] .mobile .about-us-page .team_item:last-child {
+    margin-right: 0;
+    margin-left: 4vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  html[dir="rtl"] .about-us-page .team_item .image .socials .links {
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  html[dir="rtl"] .about-us-page .office .arrows {
+    right: auto;
+    left: 15px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  html[dir="rtl"] .about-us-page .team_item {
+    margin-left: 12px;
+    margin-right: 0;
+  }
+}
+
+/* --- Contacts page RTL --- */
+html[dir="rtl"] .contacts-page .page_body {
+  direction: rtl;
+}
+
+html[dir="rtl"] .contacts-page .contacts-left .tel,
+html[dir="rtl"] .contacts-page .contacts-left .email {
+  float: right;
+}
+
+html[dir="rtl"] .contacts-page .contacts-left .address {
+  padding-left: 0;
+  padding-right: 25px;
+  text-align: right;
+  line-height: 38px;
+}
+
+html[dir="rtl"] .contacts-page .contacts-left .address:before {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .contacts-page .contacts-left .btn {
+  float: right;
+}
+
+html[dir="rtl"] .contacts-page .contacts-right {
+  margin-left: 0;
+  margin-right: 2%;
+}
+
+@media screen and (max-width: 1200px) {
+  html[dir="rtl"] .contacts-page .contacts-right {
+    margin-right: 0;
+  }
+}

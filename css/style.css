@@ -282,6 +282,9 @@ select::-ms-expand {
     transform: scale(0.95, 1.05);
   }
 }
+.mt__48{
+  margin-top: 48px;
+}
 .bouncy {
   -webkit-animation: bouncy 0.6s;
   animation: bouncy 0.6s;
@@ -483,6 +486,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
 .page_head .title,
 .page_head .subtitle {
   text-align: left;
+  line-height: 36px;
 }
 .page .left_content {
   max-width: 1090px;
@@ -2182,6 +2186,8 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   clear: both;
   transform: translateX(-100vw);
   transition: all 0.4s ease-out;
+  color: #fff;
+  margin-top: 20px;
 }
 .main_slider .slider_wrap .slide .slide_content .buttons {
   margin-top: 50px;
@@ -2735,9 +2741,10 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   font-family: 'YekanBakhFaNum', serif;
   text-align: center;
   margin-bottom: 20px;
+  font-weight: 700;
 }
 .destinations_item ._content ._info {
-  color: rgba(255, 255, 255, 0.53);
+  color: rgba(255, 255, 255, 1);
   text-align: center;
   opacity: 0;
   transition: all 0.2s ease-in;
@@ -3074,7 +3081,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   float: left;
 }
 .story_item:hover .shadow {
-  opacity: 1;
+  opacity: 0.7;
   transition: all 0.2s ease-out;
 }
 .story_item:hover ._content {
@@ -3155,7 +3162,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
 }
 .story_item ._content .text {
   font-size: 21px;
-  color: rgba(255, 255, 255, 0.56);
+  color: rgba(255, 255, 255, 1);
   margin-top: 8px;
   opacity: 0;
   height: 56px;
@@ -3207,6 +3214,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
 .blog_item:hover .blog_item_top .shadow {
   opacity: 1;
   transition: all 0.2s ease-out;
+  opacity: 0.7;
 }
 .blog_item_top {
   background-position: center center;
@@ -3576,6 +3584,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   position: relative;
   margin-bottom: 30px;
   margin-top: 40px;
+  line-height: 40px;
 }
 .footer_top .right .address:before {
   width: 16px;
@@ -5527,6 +5536,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   padding-bottom: 50px;
   padding-left: 50px;
   padding-right: 50px;
+  background: #151515;
 }
 .stories_page .left_btn {
   background: #D03000;
@@ -6097,6 +6107,8 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
 .travel-list .posts .item:hover .item_left .image .shadow {
   opacity: 1;
   transition: all .2s linear;
+  opacity: 0.7;
+
 }
 .travel-list .posts .item:hover .item_right {
   background: #f5f5f5;
@@ -6343,7 +6355,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   color: #fff;
 }
 .travel-list.full-width-image-header .page_head .subtitle {
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.7);
 }
 .image_header {
   height: 526px;
@@ -10934,7 +10946,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   line-height: 36px;
 }
 .contacts-page .contacts-left p:not([class]) {
-  color: rgba(34, 34, 34, 0.37);
+  color: #666666;
   font-size: 18px;
 }
 .contacts-page .contacts-left .email {
@@ -11094,14 +11106,20 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
 }
 .about-us-page .description {
   color: #222;
-  font-size: 26px;
-  font-style: italic;
+  font-size: 22px;
   margin-bottom: 28px;
+  font-weight: 500;
+  line-height: 40px;
 }
 .about-us-page .text {
-  font-size: 21px;
-  color: #919193;
+  font-size: 22px;
+  color: #222222;
   text-align: center;
+  color: #222;
+  font-size: 22px;
+  margin-bottom: 28px;
+  font-weight: 500;
+  line-height: 40px;
 }
 .about-us-page .image-block {
   margin-top: 40px;
@@ -11144,6 +11162,13 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   float: none;
   margin-bottom: 12px;
 }
+.about-us-page .statistics_item .service__image{
+  background-color: unset;
+  border-radius: unset;
+  width: 112px;
+  height: 112px;
+
+}
 .about-us-page .statistics_item ._title {
   font-size: 21px;
   color: #222;
@@ -11151,8 +11176,10 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   margin-bottom: 20px;
 }
 .about-us-page .statistics_item ._text {
-  font-size: 21px;
-  color: #919193;
+  font-size: 18px;
+  color: #666666;
+  text-align: justify;
+  color: #333333;
 }
 .about-us-page .team {
   overflow: hidden;
