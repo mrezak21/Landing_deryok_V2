@@ -331,7 +331,7 @@ html[dir="rtl"] .destinations .title_wrap,
 html[dir="rtl"] .stories .title_wrap,
 html[dir="rtl"] .blog .title_wrap {
   padding-right: 0;
-  padding-left: 300px;
+  /* padding-left: 300px; */
 }
 
 html[dir="rtl"] .most_popular .controls,
@@ -429,7 +429,7 @@ html[dir="rtl"] .tour_item_bottom ._info_right .rating-stars {
 html[dir="rtl"] .destinations_item {
   float: right;
   margin-right: 0;
-  margin-left: 2.66666667%;
+  /* margin-left: 2.66666667%; */
 }
 
 html[dir="rtl"] .destinations_item:nth-child(4n) {
@@ -438,6 +438,142 @@ html[dir="rtl"] .destinations_item:nth-child(4n) {
 
 html[dir="rtl"] .destinations_item .sq_parent .sq_wrap .sq_content {
   float: right;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1000px) {
+  .destinations .section_content {
+    overflow: visible;
+  }
+
+  .destinations .section_content .scroll {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    white-space: normal;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .destinations .section_content .scroll .destinations_item {
+    width: 23%;
+    display: block;
+    float: left;
+    margin-right: 2.66666667%;
+    margin-bottom: 2.66666667%;
+  }
+
+  .destinations .section_content .scroll .destinations_item:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  .destinations .section_content .scroll .destinations_item:last-child {
+    margin-right: 0;
+  }
+
+  html[dir="rtl"] .destinations .section_content .scroll .destinations_item {
+    float: right;
+    margin-right: 0;
+    margin-left: 2.66666667%;
+  }
+
+  html[dir="rtl"] .destinations .section_content .scroll .destinations_item:nth-child(4n) {
+    margin-left: 0;
+  }
+
+  html[dir="rtl"] .destinations .section_content .scroll .destinations_item:last-child {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  html[dir="rtl"] .tour_item {
+    margin-left: 0;
+  }
+  .destinations .wrap {
+    width: 100%;
+  }
+
+  .destinations .title_wrap {
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+
+  .destinations .section_content {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .destinations .section_content .scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
+    max-width: none;
+    white-space: nowrap;
+    padding-left: 4%;
+    padding-right: 0;
+  }
+
+  .destinations .section_content .scroll .destinations_item {
+    flex: 0 0 300px;
+    width: 300px;
+    float: none;
+    display: block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .destinations .section_content .scroll .destinations_item:nth-child(4n) {
+    margin-right: 20px;
+  }
+
+  .destinations .section_content .scroll .destinations_item:last-child {
+    margin-right: 4vw;
+  }
+
+  html[dir="rtl"] .destinations .controls {
+    left: 4%;
+    right: auto;
+  }
+
+  html[dir="rtl"] .destinations .section_content .scroll {
+    padding-right: 4%;
+    padding-left: 0;
+  }
+
+  html[dir="rtl"] .destinations .section_content .scroll .destinations_item {
+    float: none;
+    margin-right: 0;
+    margin-left: 20px;
+  }
+
+  html[dir="rtl"] .destinations .section_content .scroll .destinations_item:nth-child(4n) {
+    margin-left: 20px;
+  }
+
+  html[dir="rtl"] .destinations .section_content .scroll .destinations_item:last-child {
+    margin-right: 0;
+    margin-left: 4vw;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .destinations .section_content .scroll .destinations_item {
+    flex: 0 0 270px;
+    width: 270px;
+    margin-right: 13px;
+    margin-bottom: 13px;
+  }
+
+  html[dir="rtl"] .destinations .section_content .scroll .destinations_item {
+    margin-right: 0;
+    margin-left: 13px;
+  }
+
+  html[dir="rtl"] .destinations .section_content .scroll .destinations_item:nth-child(4n) {
+    margin-left: 13px;
+  }
 }
 
 /* --- Search form --- */
@@ -495,7 +631,8 @@ html[dir="rtl"] .search-form .btn {
 html[dir="rtl"] .story_item {
   float: right;
   margin-right: 0;
-  margin-left: 35px;
+  /* margin-left: 35px; */
+  margin-left: 16px;
 }
 
 /* --- Blog --- */
@@ -592,7 +729,7 @@ html[dir="rtl"] .footer_top .right .address:before {
 
 html[dir="rtl"] .footer_top .col {
   padding-right: 0;
-  padding-left: 42px;
+  /* padding-left: 42px; */
 }
 
 html[dir="rtl"] .footer_bottom .right {
@@ -696,13 +833,91 @@ html[dir="rtl"] .pagination .arrow.next {
   }
 }
 
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1200px) {
+  html[dir="rtl"] .top_panel .menu_wrap .center {
+    width: 100%;
+    max-width: 940px;
+    left: auto;
+    right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  html[dir="rtl"] .top_panel .menu_wrap .center .menu ul li {
+    margin-left: 0;
+    text-align: right;
+  }
+
+  html[dir="rtl"] .top_panel .menu_wrap .scroll .right {
+    width: 100%;
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    left: auto;
+    right: auto;
+    float: none;
+    text-align: center;
+  }
+
+  html[dir="rtl"] .top_panel .menu_wrap .scroll .right .favorites-count {
+    position: relative;
+    left: auto;
+    right: auto;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    display: inline-block;
+  }
+
+  html[dir="rtl"] .top_panel .mobile_btn {
+    position: relative;
+    z-index: 5;
+  }
+
   html[dir="rtl"] .top_panel .menu_wrap .close {
     float: left;
     right: auto;
     left: 0;
+    z-index: 2;
   }
 
+  html[dir="rtl"] .top_panel .menu_wrap .center .menu ul li.dropdown_li > a {
+    position: relative;
+    padding-left: 56px;
+  }
+
+  html[dir="rtl"] .top_panel .menu_wrap .center .menu ul li.dropdown_li > a:before,
+  html[dir="rtl"] .top_panel .menu_wrap .center .menu ul li.dropdown_li > a:after {
+    pointer-events: none;
+  }
+
+  html[dir="rtl"] .top_panel .menu_wrap .center .menu ul li .dropdown_ul {
+    display: none;
+    position: static;
+    width: 100%;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  html[dir="rtl"] .top_panel .menu_wrap .center .menu ul li .dropdown_ul.is-open {
+    display: block;
+  }
+
+  html[dir="rtl"] .top_panel .menu_wrap .center .menu ul li .dropdown_ul li a {
+    float: none;
+    display: block;
+    line-height: 1.5;
+    padding: 10px 0;
+  }
+}
+
+@media screen and (max-width: 1040px) {
   html[dir="rtl"] .top_panel .user {
     left: 50%;
     margin-left: 0;
@@ -715,17 +930,15 @@ html[dir="rtl"] .pagination .arrow.next {
     margin-right: -400px;
   }
 
-  html[dir="rtl"] .top_panel .center {
-    margin-left: 0;
-    margin-right: -470px;
-  }
-
-  html[dir="rtl"] .top_panel .center .menu ul li {
-    text-align: right;
-  }
-
-  html[dir="rtl"] .top_panel .center .menu ul li a {
+  html[dir="rtl"] .top_panel .menu_wrap .center .menu ul li a {
     float: right;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  html[dir="rtl"] .top_panel .mobile_btn {
+    left: auto;
+    right: 0;
   }
 }
 
