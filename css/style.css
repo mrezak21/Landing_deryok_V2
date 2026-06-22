@@ -3650,6 +3650,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   float: left;
   position: relative;
   margin-right: 23px;
+  /* background-color: #000000ac; */
 }
 .social-links .link:last-child {
   margin-right: 0;
@@ -3689,67 +3690,67 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   will-change: opacity;
 }
 .social-links .link:hover:after {
-  opacity: 1;
+  opacity: 0.3;
   transition: all .1s linear;
 }
 .social-links .link.facebook {
-  background: #33589E;
+  /* background: #33589E; */
 }
 .social-links .link.facebook span:before {
-  width: 13px;
+  /* width: 13px;
   height: 25px;
   background-image: url(../img/facebook-logo.svg);
   margin-top: -13px;
-  margin-left: -7px;
+  margin-left: -7px; */
 }
 .social-links .link.instagram {
-  background: #4c5ad1;
+  /* background: #4c5ad1; */
   /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #4c5ad1 0%, #ff3756 42%, #ff3e37 60%, #ffd42b 100%);
+  /* background: -moz-linear-gradient(-45deg, #4c5ad1 0%, #ff3756 42%, #ff3e37 60%, #ffd42b 100%); */
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(-45deg, #4c5ad1 0%, #ff3756 42%, #ff3e37 60%, #ffd42b 100%);
+  /* background: -webkit-linear-gradient(-45deg, #4c5ad1 0%, #ff3756 42%, #ff3e37 60%, #ffd42b 100%); */
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #4c5ad1 0%, #ff3756 42%, #ff3e37 60%, #ffd42b 100%);
+  /* background: linear-gradient(135deg, #4c5ad1 0%, #ff3756 42%, #ff3e37 60%, #ffd42b 100%); */
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c5ad1', endColorstr='#ffd42b', GradientType=1);
+  /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c5ad1', endColorstr='#ffd42b', GradientType=1); */
   /* IE6-9 fallback on horizontal gradient */
 }
 .social-links .link.instagram span:before {
-  width: 22px;
+  /* width: 22px;
   height: 22px;
   background-image: url(../img/instagram-logo.svg);
   margin-top: -11px;
-  margin-left: -11px;
+  margin-left: -11px; */
 }
-.social-links .link.pinterest {
-  background: #C8232C;
+.social-links .link.whatsapp {
+  /* background: #C8232C; */
 }
-.social-links .link.pinterest span:before {
-  width: 20px;
+.social-links .link.whatsapp span:before {
+  /* width: 20px;
   height: 24px;
   background-image: url(../img/pinterest.svg);
   margin-top: -12px;
-  margin-left: -10px;
+  margin-left: -10px; */
 }
-.social-links .link.twitter {
-  background: #4BA0EB;
+.social-links .link.telegram {
+  /* background: #4BA0EB; */
 }
-.social-links .link.twitter span:before {
-  width: 26px;
+.social-links .link.telegram span:before {
+  /* width: 26px;
   height: 20px;
-  background-image: url(../img/twitter-logo.svg);
+  background-image: url(../img/telegram.svg);
   margin-top: -10px;
-  margin-left: -13px;
+  margin-left: -13px; */
 }
 .social-links .link.youtube {
-  background: #FF000E;
+  /* background: #FF000E; */
 }
 .social-links .link.youtube span:before {
-  width: 23px;
+  /* width: 23px;
   height: 16px;
   background-image: url(../img/youtube-logo.svg);
   margin-top: -8px;
-  margin-left: -12px;
+  margin-left: -12px; */
 }
 .modal_search {
   background: rgba(0, 48, 208, 0.89);
@@ -3941,7 +3942,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
     top: 20px;
   }
   .main_slider .slider_wrap .slide .slide_content {
-    padding-bottom: 50px;
+    padding-bottom: 60px;
   }
   .main_slider .slider_wrap .slide .slide_content .title_wrap {
     margin-bottom: 15px;
@@ -4447,23 +4448,23 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
     margin-top: -11px;
     margin-left: -11px;
   }
-  .top_panel .center .menu .mobile_content .link.pinterest {
+  .top_panel .center .menu .mobile_content .link.whatsapp {
     background: #C8232C;
   }
-  .top_panel .center .menu .mobile_content .link.pinterest span:before {
+  .top_panel .center .menu .mobile_content .link.whatsapp span:before {
     width: 20px;
     height: 24px;
     background-image: url(../img/pinterest.svg);
     margin-top: -12px;
     margin-left: -10px;
   }
-  .top_panel .center .menu .mobile_content .link.twitter {
+  .top_panel .center .menu .mobile_content .link.telegram {
     background: #4BA0EB;
   }
-  .top_panel .center .menu .mobile_content .link.twitter span:before {
+  .top_panel .center .menu .mobile_content .link.telegram span:before {
     width: 26px;
     height: 20px;
-    background-image: url(../img/twitter-logo.svg);
+    background-image: url(../img/telegram.svg);
     margin-top: -10px;
     margin-left: -13px;
   }
@@ -5195,7 +5196,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
     margin-top: 17px;
   }
   .main_slider .slider_wrap .slide .slide_content {
-    padding-bottom: 22px;
+    padding-bottom: 60px;
   }
   .main_slider .arrows {
     bottom: 22px;
@@ -11357,21 +11358,21 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
 .about-us-page .team_item .image .socials .links a.instagram:before {
   width: 26px;
   height: 26px;
-  background-image: url(../img/instagram-logo.svg);
+  background-image: url(../img/instagram.svg);
   margin-top: -13px;
   margin-left: -13px;
 }
-.about-us-page .team_item .image .socials .links a.pinterest:before {
+.about-us-page .team_item .image .socials .links a.whatsapp:before {
   width: 22px;
   height: 28px;
   background-image: url(../img/pinterest.svg);
   margin-top: -14px;
   margin-left: -11px;
 }
-.about-us-page .team_item .image .socials .links a.twitter:before {
+.about-us-page .team_item .image .socials .links a.telegram:before {
   width: 28px;
   height: 22px;
-  background-image: url(../img/twitter-logo.svg);
+  background-image: url(../img/telegram.svg);
   margin-top: -11px;
   margin-left: -14px;
 }
@@ -11566,10 +11567,10 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   .about-us-page .team_item .image .socials .links a.instagram:before {
     background-image: url(../img/instagram-logo-black.svg);
   }
-  .about-us-page .team_item .image .socials .links a.pinterest:before {
+  .about-us-page .team_item .image .socials .links a.whatsapp:before {
     background-image: url(../img/pinterest-black.svg);
   }
-  .about-us-page .team_item .image .socials .links a.twitter:before {
+  .about-us-page .team_item .image .socials .links a.telegram:before {
     background-image: url(../img/twitter-logo-black.svg);
   }
   .about-us-page .team_item .image {
