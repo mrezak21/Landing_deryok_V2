@@ -80,4 +80,16 @@
       closeMenu();
     }
   });
+
+  document.querySelectorAll('.site__menu-cta[href="#contacts-section"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var target = document.getElementById('contacts-section');
+      if (!target) {
+        return;
+      }
+      e.preventDefault();
+      closeMenu();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
 })();

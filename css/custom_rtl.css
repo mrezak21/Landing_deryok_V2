@@ -1075,6 +1075,10 @@ html[dir="rtl"] .about-us-page .office .arrows .arrow:not(.next) {
 }
 
 /* --- Contacts page RTL --- */
+#contacts-section {
+  scroll-margin-top: 90px;
+}
+
 html[dir="rtl"] .contacts-page .page_body {
   direction: rtl;
 }
@@ -1089,6 +1093,15 @@ html[dir="rtl"] .contacts-page .contacts-left .address {
   padding-right: 25px;
   text-align: right;
   line-height: 38px;
+  display: block;
+  text-decoration: none;
+  color: #222;
+  cursor: pointer;
+  transition: color 0.2s linear;
+}
+
+html[dir="rtl"] .contacts-page .contacts-left .address:hover {
+  color: #ff3b00;
 }
 
 html[dir="rtl"] .contacts-page .contacts-left .address:before {
