@@ -592,7 +592,7 @@
                     </div>
                     <div class="section_content">
                         <div class="stries_slider" id="stries_slider">
-                            <a href="#contacts-section" class="story_item" style="background-image: url(img/storyrosiyeh.jpeg)">
+                            <a href="#" class="story_item js-story-open" data-video="video/HeroVideo.mp4" style="background-image: url(img/storyrosiyeh.jpeg)">
                                 <div class="item_wrap">
                                     <div class="_content">
                                         <div class="flag_wrap">
@@ -609,7 +609,7 @@
                                 <div class="shadow js-shadow"></div>
                             </a>
                             
-                            <a href="#contacts-section" class="story_item" style="background-image: url(img/storymaldiv.jpg)">
+                            <a href="#" class="story_item js-story-open" data-video="video/HeroVideo.mp4" style="background-image: url(img/storymaldiv.jpg)">
                                 <div class="item_wrap">
                                     <div class="_content">
                                         <div class="flag_wrap">
@@ -626,7 +626,7 @@
                                 <div class="shadow js-shadow"></div>
                             </a>
                             
-                            <a href="#contacts-section" class="story_item" style="background-image: url(img/storyUstoralia.jpg)">
+                            <a href="#" class="story_item js-story-open" data-video="video/HeroVideo.mp4" style="background-image: url(img/storyUstoralia.jpg)">
                                 <div class="item_wrap">
                                     <div class="_content">
                                         <div class="flag_wrap">
@@ -643,7 +643,7 @@
                                 <div class="shadow js-shadow"></div>
                             </a>
                             
-                            <a href="#contacts-section" class="story_item" style="background-image: url(img/storymadagaskar.jpeg)">
+                            <a href="#" class="story_item js-story-open" data-video="video/HeroVideo.mp4" style="background-image: url(img/storymadagaskar.jpeg)">
                                 <div class="item_wrap">
                                     <div class="_content">
                                         <div class="flag_wrap">
@@ -660,7 +660,7 @@
                                 <div class="shadow js-shadow"></div>
                             </a>
                             
-                            <a href="#contacts-section" class="story_item" style="background-image: url(img/storysoeis.jpeg)">
+                            <a href="#" class="story_item js-story-open" data-video="video/HeroVideo.mp4" style="background-image: url(img/storysoeis.jpeg)">
                                 <div class="item_wrap">
                                     <div class="_content">
                                         <div class="flag_wrap">
@@ -677,7 +677,7 @@
                                 <div class="shadow js-shadow"></div>
                             </a>
                             
-                            <a href="#contacts-section" class="story_item" style="background-image: url(img/storyyonan.jpeg)">
+                            <a href="#" class="story_item js-story-open" data-video="video/HeroVideo.mp4" style="background-image: url(img/storyyonan.jpeg)">
                                 <div class="item_wrap">
                                     <div class="_content">
                                         <div class="flag_wrap">
@@ -694,7 +694,7 @@
                                 <div class="shadow js-shadow"></div>
                             </a>
                             
-                            <a href="#contacts-section" class="story_item" style="background-image: url(img/storyafrigha.jpeg)">
+                            <a href="#" class="story_item js-story-open" data-video="video/HeroVideo.mp4" style="background-image: url(img/storyafrigha.jpeg)">
                                 <div class="item_wrap">
                                     <div class="_content">
                                         <div class="flag_wrap">
@@ -1031,6 +1031,26 @@
     </div>
   
     
+    <div class="story-modal" id="story_modal" aria-hidden="true">
+        <div class="story-modal__overlay"></div>
+        <div class="story-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="story_modal_title">
+            <button type="button" class="story-modal__close" id="story_modal_close" aria-label="بستن">
+                <span></span>
+                <span></span>
+            </button>
+            <div class="story-modal__body">
+                <div class="story-modal__video-wrap">
+                    <button type="button" class="story-modal__nav story-modal__nav--prev" id="story_modal_prev" aria-label="قبلی"></button>
+                    <button type="button" class="story-modal__nav story-modal__nav--next" id="story_modal_next" aria-label="بعدی"></button>
+                    <video class="story-modal__video" id="story_modal_video" controls playsinline></video>
+                </div>
+                <h3 class="story-modal__title" id="story_modal_title"></h3>
+                <p class="story-modal__text" id="story_modal_text"></p>
+                <a href="#contacts-section" class="btn button story-modal__cta" id="story_modal_cta">درخواست مشاوره</a>
+            </div>
+        </div>
+    </div>
+
     <div class="overlay" id="overlay"></div>
     
     
@@ -1053,6 +1073,7 @@
     <script src="js/hammer.js"></script>
     <script src="js/scripts.min.js"></script>
     <script src="js/site-menu.js"></script>
+    <script src="js/stories-modal.js"></script>
     <script>
     (function ($) {
         var $slider = $('#main_slider_wrap');
