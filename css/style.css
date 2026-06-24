@@ -11133,6 +11133,8 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   margin-bottom: 28px;
   font-weight: 500;
   line-height: 40px;
+  text-align: justify;
+  text-align-last: center;
 }
 .about-us-page .image-block {
   margin-top: 40px;
@@ -11198,6 +11200,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   color: #333333;
   text-align: justify;
   text-align-last: center;
+  line-height: 32px;
 }
 .about-us-page .team {
   overflow: hidden;
