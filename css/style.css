@@ -10982,7 +10982,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   position: absolute;
   content: '';
   left: 0;
-  top: 5px;
+  top: 15px;
 }
 .contacts-page .contacts-left .social-links {
   margin-top: 34px;

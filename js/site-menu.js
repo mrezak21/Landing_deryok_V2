@@ -3,27 +3,67 @@
   var toggle = document.getElementById('site_menu_toggle');
   var MOBILE_BP = 992;
 
-  if (!nav || !toggle) {
-    return;
-  }
-
   function isMobile() {
     return window.innerWidth < MOBILE_BP;
   }
 
-  function openMenu() {
-    nav.classList.add('is-open');
-    toggle.classList.add('is-active');
-    document.documentElement.classList.add('site-menu-open');
-  }
-
   function closeMenu() {
+    if (!nav || !toggle) {
+      return;
+    }
+
     nav.classList.remove('is-open');
     toggle.classList.remove('is-active');
     document.documentElement.classList.remove('site-menu-open');
     nav.querySelectorAll('.site__menu-item--has-sub.is-open').forEach(function (item) {
       item.classList.remove('is-open');
     });
+  }
+
+  function closeOpenModals() {
+    var storyModal = document.getElementById('story_modal');
+    var blogModal = document.getElementById('blog_modal');
+    var storyClose = document.getElementById('story_modal_close');
+    var blogClose = document.getElementById('blog_modal_close');
+
+    if (storyModal && storyModal.classList.contains('is-open') && storyClose) {
+      storyClose.click();
+    }
+
+    if (blogModal && blogModal.classList.contains('is-open') && blogClose) {
+      blogClose.click();
+    }
+  }
+
+  function scrollToContacts() {
+    var target = document.getElementById('contacts-section');
+    if (!target) {
+      return;
+    }
+
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href="#contacts-section"]');
+    if (!link) {
+      return;
+    }
+
+    e.preventDefault();
+    closeMenu();
+    closeOpenModals();
+    scrollToContacts();
+  });
+
+  if (!nav || !toggle) {
+    return;
+  }
+
+  function openMenu() {
+    nav.classList.add('is-open');
+    toggle.classList.add('is-active');
+    document.documentElement.classList.add('site-menu-open');
   }
 
   toggle.addEventListener('click', function () {
@@ -79,17 +119,5 @@
     if (e.key === 'Escape') {
       closeMenu();
     }
-  });
-
-  document.querySelectorAll('.site__menu-cta[href="#contacts-section"]').forEach(function (link) {
-    link.addEventListener('click', function (e) {
-      var target = document.getElementById('contacts-section');
-      if (!target) {
-        return;
-      }
-      e.preventDefault();
-      closeMenu();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
   });
 })();

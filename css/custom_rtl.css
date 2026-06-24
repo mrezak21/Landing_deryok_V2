@@ -1098,6 +1098,7 @@ html[dir="rtl"] .contacts-page .contacts-left .address {
   color: #222;
   cursor: pointer;
   transition: color 0.2s linear;
+  display: inline-block;
 }
 
 html[dir="rtl"] .contacts-page .contacts-left .address:hover {
@@ -2004,6 +2005,9 @@ html.story-modal-open {
 
 .blog-modal__article p {
   margin: 0 0 14px;
+  text-align: justify;
+  padding-left: 16px;
+  line-height: 40px;
 }
 
 .blog-modal__article ul {
