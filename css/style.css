@@ -3456,7 +3456,10 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   font-size: 48px;
   color: #fff;
   font-family: 'YekanBakhFaNum', serif;
-  width: auto;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 .subscribe_section .subscribe_block ._subtitle {
   font-size: 24px;
