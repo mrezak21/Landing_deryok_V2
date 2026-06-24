@@ -1817,3 +1817,240 @@ html.story-modal-open {
     font-size: 20px;
   }
 }
+
+/* --- Blog post modal --- */
+.blog-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s linear, visibility 0.25s linear;
+}
+
+.blog-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.blog-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.77);
+}
+
+.blog-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 640px;
+  height: 90vh;
+  max-height: 90vh;
+  margin: 0;
+  padding: 0 24px 24px;
+  overflow: hidden;
+  background: rgba(28, 28, 30, 0.72);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 32px 32px 0 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-modal__dialog .line__box {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 5px;
+  width: 100px;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.37);
+  z-index: 4;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.blog-modal__dialog .line__box::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 40px;
+}
+
+.blog-modal.is-dragging .blog-modal__dialog {
+  transition: none;
+  overflow: hidden;
+}
+
+.blog-modal__dialog.is-snap-back,
+.blog-modal__dialog.is-dismiss {
+  transition: transform 0.28s ease-out;
+}
+
+.blog-modal__close {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  z-index: 5;
+  padding: 0;
+}
+
+.blog-modal__close span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  height: 2px;
+  margin-left: -11px;
+  margin-top: -1px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.blog-modal__close span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.blog-modal__close span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+.blog-modal__body {
+  flex: 1;
+  min-height: 0;
+  padding-top: 72px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.blog-modal__image-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 20px;
+  background: #000;
+}
+
+.blog-modal__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.blog-modal__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.blog-modal__author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+}
+
+.blog-modal__author img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.blog-modal__date {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.blog-modal__title {
+  margin: 0 0 16px;
+  font-size: 26px;
+  line-height: 1.45;
+  color: #fff;
+  text-align: right;
+  font-weight: bold;
+}
+
+.blog-modal__article {
+  color: rgba(255, 255, 255, 1);
+  font-size: 18px;
+  line-height: 1.85;
+  text-align: right;
+}
+
+.blog-modal__article p {
+  margin: 0 0 14px;
+}
+
+.blog-modal__article ul {
+  margin: 0 0 16px;
+  padding-right: 22px;
+}
+
+.blog-modal__article li {
+  margin-bottom: 8px;
+}
+
+.blog-modal__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 280px;
+  height: 48px;
+  margin: 24px auto 8px;
+  border-radius: 8px;
+  background: #ff3b00;
+  color: #fff !important;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background 0.2s linear;
+}
+
+.blog-modal__cta:hover {
+  background: #d53200;
+  color: #fff !important;
+}
+
+html.blog-modal-open {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+@media screen and (max-width: 768px) {
+  .blog-modal__dialog {
+    padding: 0 16px 20px;
+  }
+
+  .blog-modal__title {
+    font-size: 22px;
+  }
+
+  .blog-modal__article {
+    font-size: 16px;
+  }
+}

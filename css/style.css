@@ -3339,6 +3339,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   font-size: 21px;
   color: #222222;
   line-height: 36px;
+  font-weight: 700;
 }
 /*----------------------------------------------------------------------------------
 8. Subscribe section
