@@ -1552,9 +1552,9 @@ html.site-menu-open {
   inset: 0;
   z-index: 300;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  padding: 24px;
+  padding: 0;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -1570,28 +1570,41 @@ html.site-menu-open {
 .story-modal__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.88);
+  background: rgba(0, 0, 0, 0.77);
 }
 
 .story-modal__dialog {
   position: relative;
   z-index: 1;
-  width: min(920px, 100%);
-  max-height: calc(100vh - 48px);
-  overflow-y: auto;
-  height: 100%;
+  width: 100%;
+  height: 90vh;
+  max-height: 90vh;
+  margin: 0;
+  padding: 0 24px 24px;
+  overflow: hidden;
+  background: #000000;
+  border-radius: 32px 32px 0 0;
+  box-sizing: border-box;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  
+  flex-direction: column;
+}
+.story-modal__dialog .line__box{
+  position: absolute;
+  content: '';
+  top: 8px;
+  right: 0;
+  height: 5px;
+  width: 50px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.37);
 }
 
 .story-modal__close {
   position: absolute;
-  top: -8px;
-  left: 0;
-  width: 48px;
-  height: 48px;
+  top: 16px;
+  left: 16px;
+  width: 40px;
+  height: 40px;
   border: 0;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.2);
@@ -1621,17 +1634,21 @@ html.site-menu-open {
 }
 
 .story-modal__body {
-  padding-top: 56px;
+  flex: 1;
+  min-height: 0;
+  padding-top: 72px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .story-modal__video-wrap {
   position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
   border-radius: 14px;
   overflow: hidden;
   background: #000;
-  aspect-ratio: 16 / 9;
 }
 
 .story-modal__video {
@@ -1687,7 +1704,8 @@ html.site-menu-open {
 }
 
 .story-modal__title {
-  margin: 22px 0 8px;
+  flex-shrink: 0;
+  margin: 16px 0 6px;
   font-size: 30px;
   color: #fff;
   text-align: center;
@@ -1695,9 +1713,10 @@ html.site-menu-open {
 }
 
 .story-modal__text {
-  margin: 0 0 24px;
+  flex-shrink: 0;
+  margin: 0 0 12px;
   font-size: 20px;
-  line-height: 1.6;
+  line-height: 1.5;
   color: rgba(255, 255, 255, 0.72);
   text-align: center;
 }
@@ -1706,7 +1725,8 @@ html.site-menu-open {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  align-self: flex-start;
+  align-self: center;
+  flex-shrink: 0;
   height: 48px;
   padding: 0 28px;
   border-radius: 8px;
@@ -1716,7 +1736,7 @@ html.site-menu-open {
   text-decoration: none;
   white-space: nowrap;
   transition: background 0.2s linear;
-  margin: 16px auto;
+  margin: 0 auto;
 }
 
 .story-modal__cta:hover {
@@ -1726,27 +1746,26 @@ html.site-menu-open {
 
 html.story-modal-open {
   overflow: hidden;
+  overscroll-behavior: none;
 }
 
 @media screen and (max-width: 768px) {
-  .story-modal {
-    padding: 16px;
-  }
-
   .story-modal__dialog {
     width: 100%;
-    height: 100%;
+    height: 90vh;
+    max-height: 90vh;
+    padding: 0 16px 20px;
   }
 
   .story-modal__close {
-    top: 0;
-    left: 0;
-    width: 44px;
-    height: 44px;
+    top: 12px;
+    left: 12px;
+    width: 40px;
+    height: 40px;
   }
 
   .story-modal__body {
-    padding-top: 52px;
+    padding-top: 64px;
   }
 
   .story-modal__nav {
